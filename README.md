@@ -4,6 +4,11 @@
 
 An easy class to mock a lot of network requests in playwright.
 
+## See also 🔬
+
+The base class of this package is:
+[https://github.com/LoaderB0T/easy-network-stub](https://github.com/LoaderB0T/easy-network-stub)
+
 ## Motivation 💥
 
 When running tests in playwright, sometimes you want to mock all network requests. Especially when running tests in a CI environment. This package provides an easy and type safe way to mock network requests for a whole API.
