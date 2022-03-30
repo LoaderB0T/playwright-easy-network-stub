@@ -1,12 +1,13 @@
-import { CypressEasyNetworkStub } from '../src/cypress-easy-network-stub';
+import { BrowserContext } from '@playwright/test';
+import { PlaywrightEasyNetworkStub } from '../src/playwright-easy-network-stub';
 
 export class Test {
   init() {
     const posts = [0, 1, 2, 3, 4, 5].map(x => ({ postId: x, text: `test${x}` }));
 
-    const blogStub = new CypressEasyNetworkStub('/MyServer/api/Blog');
+    const blogStub = new PlaywrightEasyNetworkStub('/MyServer/api/Blog');
 
-    blogStub.init();
+    blogStub.init({} as BrowserContext);
 
     blogStub.stub('GET', 'posts', (body, params) => {
       return posts;

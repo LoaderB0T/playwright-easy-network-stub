@@ -1,12 +1,12 @@
-[![npm](https://img.shields.io/npm/v/cypress-easy-network-stub?color=%2300d26a&style=for-the-badge)](https://www.npmjs.com/package/cypress-easy-network-stub)
+[![npm](https://img.shields.io/npm/v/playwright-easy-network-stub?color=%2300d26a&style=for-the-badge)](https://www.npmjs.com/package/playwright-easy-network-stub)
 
-# cypress-easy-network-stub
+# playwright-easy-network-stub
 
-An easy class to mock a lot of network requests in cypress.
+An easy class to mock a lot of network requests in playwright.
 
 ## Motivation 💥
 
-When running tests in cypress, sometimes you want to mock all network requests. Especially when running tests in a CI environment. This package provides an easy and type safe way to mock network requests for a whole API.
+When running tests in playwright, sometimes you want to mock all network requests. Especially when running tests in a CI environment. This package provides an easy and type safe way to mock network requests for a whole API.
 
 ## Features 🔥
 
@@ -22,7 +22,7 @@ When running tests in cypress, sometimes you want to mock all network requests. 
 
 ✅ Supports failing of stubbed requests
 
-✅ No production dependencies (You need to have cypress installed, of course)
+✅ No production dependencies (You need to have playwright installed, of course)
 
 The primary use case for this package is to create a mock server for your tests so that they do not need real network requests.
 
@@ -35,7 +35,7 @@ The primary use case for this package is to create a mock server for your tests 
 ```typescript
 const posts = [0, 1, 2, 3, 4, 5].map(x => ({ postId: x, text: `test${x}` }));
 
-const blogStub = new CypressEasyNetworkStub('/MyServer/api/Blog');
+const blogStub = new PlaywrightEasyNetworkStub('/MyServer/api/Blog');
 
 blogStub.init();
 
@@ -87,4 +87,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Janik Schumacher - [@LoaderB0T](https://twitter.com/LoaderB0T) - [linkedin](https://www.linkedin.com/in/janikschumacher/)
 
-Project Link: [https://github.com/LoaderB0T/cypress-easy-network-stub](https://github.com/LoaderB0T/cypress-easy-network-stub)
+Project Link: [https://github.com/LoaderB0T/playwright-easy-network-stub](https://github.com/LoaderB0T/playwright-easy-network-stub)
