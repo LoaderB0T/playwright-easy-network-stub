@@ -1,0 +1,20 @@
+{
+  "name": "playwright-easy-network-stub",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "repository": "https://github.com/LoaderB0T/playwright-easy-network-stub.git",
+  "author": "Janik Schumacher, Tim Quirl",
+  "license": "MIT",
+  "prettier": "@awdware/prettier-config",
+  "devDependencies": {
+    "@awdware/prettier-config": "^0.0.2",
+    "@types/node": "^16.0.0",
+    "@playwright/test": "^1.20.1",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "@playwright/test": ">= 1.18.0"
+  }
+}
