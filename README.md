@@ -1,4 +1,7 @@
 [![npm](https://img.shields.io/npm/v/playwright-easy-network-stub?color=%2300d26a&style=for-the-badge)](https://www.npmjs.com/package/playwright-easy-network-stub)
+[![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/LoaderB0T/playwright-easy-network-stub?label=Code%20Quality&style=for-the-badge)](https://lgtm.com/projects/g/LoaderB0T/playwright-easy-network-stub/?mode=list)
+[![LGTM Alerts](https://img.shields.io/lgtm/alerts/github/LoaderB0T/playwright-easy-network-stub?style=for-the-badge)](https://lgtm.com/projects/g/LoaderB0T/playwright-easy-network-stub/?mode=list)
+
 
 # playwright-easy-network-stub
 
