@@ -28,6 +28,8 @@ export class PlaywrightEasyNetworkStub extends EasyNetworkStub {
           await handler({
             destroy: () => route.abort(),
             method: route.request().method() as HttpMethod,
+            body: route.request().postData(),
+            headers: await route.request().allHeaders(),
             url: route.request().url(),
             reply: r => route.fulfill({ status: r.statusCode, body: JSON.stringify(r.body), headers: r.headers })
           });
