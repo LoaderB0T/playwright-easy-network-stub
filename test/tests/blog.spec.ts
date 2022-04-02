@@ -9,7 +9,7 @@ const baseUrl = 'https://example.com';
 test.beforeEach(async ({ page, context }) => {
   await page.goto(baseUrl);
   blogStub = new PlaywrightEasyNetworkStub('**/MyServer/api/Blog/**');
-  await blogStub.init(context, 'debug');
+  await blogStub.init(context);
   blogStub['_failer'] = (error: string) => {
     lastError = error;
   };
