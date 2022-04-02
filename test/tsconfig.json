@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "playwright-easy-network-stub": ["lib/index"]
+    },
+    "lib": ["dom"]
+  }
+}

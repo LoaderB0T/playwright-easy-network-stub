@@ -8,10 +8,11 @@
   "prettier": "@awdware/prettier-config",
   "scripts": {
     "clean": "yarn rimraf lib",
-    "build": "yarn run clean && yarn tsc"
+    "build": "yarn run clean && yarn tsc",
+    "test": "yarn playwright test"
   },
   "dependencies": {
-    "easy-network-stub": "^1.1.0"
+    "easy-network-stub": "^3.0.0"
   },
   "devDependencies": {
     "@awdware/prettier-config": "^0.0.2",

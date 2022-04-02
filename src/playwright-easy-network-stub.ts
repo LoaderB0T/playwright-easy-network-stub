@@ -1,5 +1,5 @@
 import { BrowserContext } from '@playwright/test';
-import { EasyNetworkStub, HttpMethod, LogLevel } from 'easy-network-stub';
+import { EasyNetworkStub, HttpMethod } from 'easy-network-stub';
 export class PlaywrightEasyNetworkStub extends EasyNetworkStub {
   /**
    * A class to intercept and stub all calls to a certain api path.
@@ -14,7 +14,7 @@ export class PlaywrightEasyNetworkStub extends EasyNetworkStub {
    * Call this in your beforeEach hook to start using the stub.
    * @returns A promise that resolves when the stub is ready to use.
    */
-  public async init(context: BrowserContext, logLevel?: LogLevel) {
+  public async init(context: BrowserContext) {
     return this.initInternal({
       failer: error => {
         if (error instanceof Error) {
@@ -34,8 +34,7 @@ export class PlaywrightEasyNetworkStub extends EasyNetworkStub {
             reply: r => route.fulfill({ status: r.statusCode, body: JSON.stringify(r.body), headers: r.headers })
           });
         });
-      },
-      logLevel
+      }
     });
   }
 }
