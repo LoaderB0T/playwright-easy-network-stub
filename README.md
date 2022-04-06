@@ -2,7 +2,6 @@
 [![CI](https://img.shields.io/github/workflow/status/LoaderB0T/playwright-easy-network-stub/CI/main?style=for-the-badge)](https://github.com/LoaderB0T/playwright-easy-network-stub/actions/workflows/build.yml)
 [![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/LoaderB0T_playwright-easy-network-stub?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge)](https://sonarcloud.io/summary/new_code?id=LoaderB0T_playwright-easy-network-stub)
 
-
 # playwright-easy-network-stub
 
 An easy class to mock a lot of network requests in playwright.
