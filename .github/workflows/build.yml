@@ -21,6 +21,8 @@ jobs:
         run: yarn
       - name: Build
         run: yarn run build
+      - name: Build
+        run: yarn playwright install
       # - name: Lint
       #   run: yarn run lint
       - name: Test
