@@ -10,10 +10,10 @@ test.beforeEach(async ({ page, context }) => {
   await page.goto(baseUrl);
   blogStub = new PlaywrightEasyNetworkStub('**/MyServer/api/Blog/**');
   await blogStub.init(context);
-  blogStub['_failer'] = (error: string) => {
+  blogStub['config'].failer = (error: string) => {
     lastError = error;
   };
-  blogStub['_errorLogger'] = (error: string) => {
+  blogStub['config'].errorLogger = (error: string) => {
     // Do nothing
   };
 });
