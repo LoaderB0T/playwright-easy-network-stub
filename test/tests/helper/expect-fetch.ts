@@ -8,7 +8,7 @@ export type FetchType = {
   body?: any;
 };
 
-export const expectFetch = async (page: Page, cfg: FetchType, expectedData: any) => {
+export const expectFetch = async (page: Page, cfg: FetchType, expectedData: any): Promise<void> => {
   const fetchedData = await doFetch(page, cfg);
   expect(fetchedData).toEqual(expectedData);
 };
@@ -31,7 +31,9 @@ export const expectFailFetch = async (
   url: string,
   method: HttpMethod,
   getLastError: () => string
-) => {
-  await doFetch(page, { url, method }).catch(() => {});
+): Promise<void> => {
+  await doFetch(page, { url, method }).catch(() => {
+    // expected and ignored, because we want to assert the error
+  });
   expect(getLastError()).toBe(getError(baseUrl + url, method));
 };
