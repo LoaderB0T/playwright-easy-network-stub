@@ -13,7 +13,7 @@ export const expectFetch = async (page: Page, cfg: FetchType, expectedData: any)
   expect(fetchedData).toEqual(expectedData);
 };
 
-export const doFetch = async (page: Page, cfg: FetchType) => {
+export const doFetch = async (page: Page, cfg: FetchType): Promise<unknown> => {
   const fetchedData = await page.evaluate(
     async ([fetchUrl, fetchMethod, fetchBody]) => {
       const res = await window.fetch(fetchUrl, { method: fetchMethod, body: fetchBody });
