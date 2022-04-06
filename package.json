@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "yarn rimraf lib",
     "build": "yarn run clean && yarn tsc",
-    "test": "yarn playwright test"
+    "test": "yarn playwright test -c test"
   },
   "dependencies": {
     "easy-network-stub": "^4.0.0"

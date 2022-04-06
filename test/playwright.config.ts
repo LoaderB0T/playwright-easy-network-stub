@@ -10,8 +10,10 @@ const config: PlaywrightTestConfig = {
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['junit', { outputFile: 'test/output/junit/junit.xml' }],
+    ['html', { outputFolder: 'test/output/html' }]
+  ],
   use: {
     actionTimeout: 0,
     baseURL: 'http://localhost:4200',
@@ -25,7 +27,7 @@ const config: PlaywrightTestConfig = {
       }
     }
   ],
-  outputDir: 'test-results/'
+  outputDir: './test/output/dir'
 };
 
 export default config;
