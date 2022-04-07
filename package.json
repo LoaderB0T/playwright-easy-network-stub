@@ -1,6 +1,6 @@
 {
   "name": "playwright-easy-network-stub",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "main": "lib/index.js",
   "repository": "https://github.com/LoaderB0T/playwright-easy-network-stub.git",
   "author": "Janik Schumacher, Tim Quirl",
@@ -12,7 +12,7 @@
     "test": "yarn playwright test -c test"
   },
   "dependencies": {
-    "easy-network-stub": "^5.0.0"
+    "easy-network-stub": "^5.1.0"
   },
   "devDependencies": {
     "@awdware/prettier-config": "^0.0.2",
