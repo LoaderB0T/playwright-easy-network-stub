@@ -3,7 +3,16 @@
   "version": "3.1.0",
   "main": "lib/index.js",
   "repository": "https://github.com/LoaderB0T/playwright-easy-network-stub.git",
-  "author": "Janik Schumacher, Tim Quirl",
+  "author": {
+    "name": "Janik Schumacher (LoaderB0T)",
+    "url": "https://awdware.de"
+  },
+  "contributors": [
+    {
+      "name": "Tim Quirl",
+      "url": "https://github.com/Timkoeln"
+    }
+  ],
   "license": "MIT",
   "prettier": "@awdware/prettier-config",
   "scripts": {
