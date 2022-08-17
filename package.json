@@ -1,6 +1,6 @@
 {
   "name": "playwright-easy-network-stub",
-  "version": "3.1.0",
+  "version": "4.0.0-beta1",
   "main": "lib/index.js",
   "repository": "https://github.com/LoaderB0T/playwright-easy-network-stub.git",
   "author": {
@@ -21,12 +21,14 @@
     "test": "yarn playwright test -c test"
   },
   "dependencies": {
-    "easy-network-stub": "^5.1.0"
+    "easy-network-stub": "^5.1.0",
+    "ws": "^8.8.1"
   },
   "devDependencies": {
     "@awdware/prettier-config": "^0.0.2",
     "@playwright/test": "^1.20.1",
     "@types/node": "^16.0.0",
+    "@types/ws": "^8.5.3",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "ts-node": "^10.1.0",

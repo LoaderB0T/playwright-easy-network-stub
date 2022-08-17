@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Websocket Test</title>
+</head>
+
+<body>
+  <p id="msg"></p>
+  <button>Send</button>
+  <script>
+    const socket = new WebSocket("ws://localhost:5000/ws")
+
+    const btnElement = document.querySelector("button")
+    btnElement.addEventListener("click", () => {
+      socket.send("Wazzup?")
+    })
+
+    socket.addEventListener("message", (event) => {
+      const msgElement = document.querySelector("#msg")
+      msgElement.textContent = event.data
+    })
+  </script>
+</body>
+
+</html>
