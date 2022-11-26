@@ -1,6 +1,6 @@
 {
   "name": "playwright-easy-network-stub",
-  "version": "4.0.0-beta1",
+  "version": "4.0.0",
   "main": "lib/index.js",
   "repository": "https://github.com/LoaderB0T/playwright-easy-network-stub.git",
   "author": {
