@@ -16,14 +16,15 @@ export class PlaywrightEasyWsStub {
    */
   constructor(port: number, path?: string) {
     this._port = port;
-    this._path = path ? (path.startsWith('/') ? path : `/${path}`) : '/';
+    const ensureLeadingSlash = (path: string) => (path.startsWith('/') ? path : `/${path}`);
+    this._path = ensureLeadingSlash(path ?? '/');
   }
 
   /**
    * Call this in your beforeEach hook to start using the stub.
    * @returns A promise that resolves when the stub is ready to use.
    */
-  public async init(context: BrowserContext) {
+  public async init(_context: BrowserContext) {
     this._connection = undefined;
     this._socketServer = new WebSocketServer({ port: this._port, path: this._path });
     this._socketServer.on('connection', (socket: WebSocket) => {
@@ -32,7 +33,7 @@ export class PlaywrightEasyWsStub {
         this._resolveOnConnection(socket);
       }
       this._connection.on('message', (msg: string) => {
-        const listener = this._msgListeners.find(listener => (listener.msg = msg));
+        const listener = this._msgListeners.find(l => (l.msg = msg));
         if (listener) {
           listener.resolve();
         } else {
