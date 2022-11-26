@@ -16,7 +16,7 @@ export class PlaywrightEasyWsStub {
    */
   constructor(port: number, path?: string) {
     this._port = port;
-    const ensureLeadingSlash = (path: string) => (path.startsWith('/') ? path : `/${path}`);
+    const ensureLeadingSlash = (str: string) => (str.startsWith('/') ? str : `/${str}`);
     this._path = ensureLeadingSlash(path ?? '/');
   }
 
