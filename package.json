@@ -16,19 +16,25 @@
   "license": "MIT",
   "prettier": "@awdware/prettier-config",
   "scripts": {
-    "clean": "yarn rimraf lib",
-    "build": "yarn run clean && yarn tsc",
-    "test": "yarn playwright test -c test"
+    "clean": "pnpm rimraf lib",
+    "build": "pnpm run clean && pnpm tsc",
+    "test": "pnpm playwright test -c test",
+    "lint": "pnpm eslint ./src/**"
   },
   "dependencies": {
     "easy-network-stub": "^5.1.0",
     "ws": "^8.8.1"
   },
   "devDependencies": {
+    "@awdware/eslint-config-base": "^1.1.0",
+    "@awdware/eslint-config-nodejs": "^1.0.0",
     "@awdware/prettier-config": "^0.0.2",
     "@playwright/test": "^1.20.1",
     "@types/node": "^16.0.0",
     "@types/ws": "^8.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "ts-node": "^10.1.0",

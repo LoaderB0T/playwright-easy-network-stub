@@ -2,12 +2,12 @@ import { BrowserContext } from '@playwright/test';
 import { WebSocket, WebSocketServer } from 'ws';
 
 export class PlaywrightEasyWsStub {
-  private _port: number;
-  private _path: string;
+  private readonly _port: number;
+  private readonly _path: string;
   private _socketServer: WebSocketServer;
   private _connection?: WebSocket;
   private _resolveOnConnection?: (socket: WebSocket) => void;
-  private _msgListeners: { msg: any; resolve: () => void }[] = [];
+  private readonly _msgListeners: { msg: any; resolve: () => void }[] = [];
 
   /**
    * A class to intercept and stub all messages on a certain socket.
