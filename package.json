@@ -1,6 +1,6 @@
 {
   "name": "playwright-easy-network-stub",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "main": "lib/index.js",
   "repository": "https://github.com/LoaderB0T/playwright-easy-network-stub.git",
   "author": {
@@ -16,13 +16,14 @@
   "license": "MIT",
   "prettier": "@awdware/prettier-config",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "clean": "pnpm rimraf lib",
     "build": "pnpm run clean && pnpm tsc",
     "test": "pnpm playwright test -c test",
     "lint": "pnpm eslint ./src/**"
   },
   "dependencies": {
-    "easy-network-stub": "^5.1.0",
+    "easy-network-stub": "^6.1.0",
     "ws": "^8.8.1"
   },
   "devDependencies": {

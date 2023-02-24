@@ -9,7 +9,7 @@ specifiers:
   '@types/ws': ^8.5.3
   '@typescript-eslint/eslint-plugin': ^5.53.0
   '@typescript-eslint/parser': ^5.53.0
-  easy-network-stub: ^5.1.0
+  easy-network-stub: ^6.1.0
   eslint: ^8.34.0
   prettier: ^2.5.1
   rimraf: ^3.0.2
@@ -18,7 +18,7 @@ specifiers:
   ws: ^8.8.1
 
 dependencies:
-  easy-network-stub: 5.1.0
+  easy-network-stub: 6.1.0
   ws: 8.8.1
 
 devDependencies:
@@ -1183,8 +1183,8 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /easy-network-stub/5.1.0:
-    resolution: {integrity: sha512-12dFO9FOFDK5oazSjK/qw5PsljG62innlaVH1SR+XnZWMzvPFV08ijV5MlmgY4z6taMXRchsj+fSZzhEBkkoOA==}
+  /easy-network-stub/6.1.0:
+    resolution: {integrity: sha512-EWVEYtuh/FQQ3uKAy0jDawFMRhSDRvxaE/6IJEBPxdnHKHZJCFDs9D52eSV2CMr7wb1V8aGStBbn/rmi4fZ/ng==}
     dev: false
 
   /electron-to-chromium/1.4.104:
