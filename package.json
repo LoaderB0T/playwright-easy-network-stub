@@ -22,9 +22,6 @@
     "test": "pnpm playwright test -c test",
     "lint": "pnpm eslint ./src/**"
   },
-  "dependencies": {
-    "ws": "^8.16.0"
-  },
   "devDependencies": {
     "@awdware/eslint-config-base": "^1.2.0",
     "@awdware/eslint-config-nodejs": "^1.0.0",
@@ -34,8 +31,8 @@
     "@types/ws": "^8.5.10",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
-    "easy-network-stub": "^6.2.0",
-    "eslint": "^9.0.0",
+    "easy-network-stub": "^7.0.2",
+    "eslint": "^8.57.0",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "ts-node": "^10.9.2",
@@ -43,6 +40,12 @@
   },
   "peerDependencies": {
     "@playwright/test": ">= 1.18.0",
-    "easy-network-stub": ">= 6.0.0"
+    "easy-network-stub": ">= 7.0.2",
+    "ws": ">= 8.16.0"
+  },
+  "peerDependenciesMeta": {
+    "ws": {
+      "optional": true
+    }
   }
 }

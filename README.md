@@ -28,7 +28,13 @@ When running tests in playwright, sometimes you want to mock all network request
 
 ✅ Supports failing of stubbed requests
 
+✅ Supports EventSource & ndjson
+
+✅ Supports WebSockets (beta)
+
 ✅ No production dependencies (You need to have playwright installed, of course)
+
+✅ ESM & CJS exports
 
 The primary use case for this package is to create a mock server for your tests so that they do not need real network requests.
 
@@ -91,7 +97,7 @@ blogStub.stub('GET', 'test?{props:number[]}', ({ params }) => {
 });
 ```
 
-## Strongly typed api parameters:
+## Strongly typed api parameters
 
 You can add types to parameters and they will be parsed. Out of box 'string', 'number' and 'boolean' are supported. You can add your own types and parsers though.
 
@@ -99,6 +105,19 @@ You can add types to parameters and they will be parsed. Out of box 'string', 'n
 <img src="https://user-images.githubusercontent.com/37637338/162327029-994ce009-d1ab-45cc-ab86-d1e21a0d1a6e.png">
 <img src="https://user-images.githubusercontent.com/37637338/162327040-a45381a1-652d-4838-91ae-7dc405bd9ff4.png">
 </p>
+
+## Stub streams
+
+```typescript
+import { StreamResponseHandler } from 'easy-network-stub/stream';
+
+const srh = new StreamResponseHandler();
+blogStub.stub('POST', 'test', () => srh);
+
+srh.send('Hello');
+srh.send('World');
+srh.close();
+```
 
 ## Contributing 🧑🏻‍💻
 
