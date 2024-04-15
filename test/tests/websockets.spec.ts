@@ -1,11 +1,11 @@
 import test, { expect } from '@playwright/test';
-import { PlaywrightEasyWsStub } from 'playwright-easy-network-stub';
+import {EasyWsStub} from 'easy-network-stub/ws';
 
-let wsStub: PlaywrightEasyWsStub;
+let wsStub: EasyWsStub;
 
 test.beforeEach(async ({ page, context }, use) => {
-  wsStub = new PlaywrightEasyWsStub(5000, 'ws');
-  await wsStub.init(context);
+  wsStub = new EasyWsStub(5000, 'ws');
+  await wsStub.init();
 });
 
 test.afterEach(async ({ page, context }, use) => {

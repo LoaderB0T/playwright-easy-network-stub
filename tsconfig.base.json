@@ -1,22 +1,28 @@
 {
   "compilerOptions": {
     "target": "ES2015",
-    "module": "CommonJS",
+    "module": "Node16",
     "baseUrl": "./",
-    "lib": ["ES2020"],
+    "lib": [
+      "ES2020"
+    ],
     "declaration": true,
     "outDir": "lib",
     "rootDir": ".",
     "strict": true,
-    "types": ["node"],
+    "types": [
+      "node"
+    ],
     "sourceMap": true,
     "esModuleInterop": true,
     "strictPropertyInitialization": false,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
     "skipLibCheck": true,
     "newLine": "lf"
   },
-  "exclude": ["lib"]
+  "exclude": [
+    "lib"
+  ]
 }
