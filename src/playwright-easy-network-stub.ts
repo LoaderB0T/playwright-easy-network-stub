@@ -1,4 +1,4 @@
-import { BrowserContext } from '@playwright/test';
+import { type BrowserContext } from '@playwright/test';
 import { EasyNetworkStub, HttpMethod } from 'easy-network-stub';
 export class PlaywrightEasyNetworkStub extends EasyNetworkStub {
   /**
@@ -31,10 +31,15 @@ export class PlaywrightEasyNetworkStub extends EasyNetworkStub {
             body: route.request().postData(),
             headers: await route.request().allHeaders(),
             url: route.request().url(),
-            reply: r => route.fulfill({ status: r.statusCode, body: JSON.stringify(r.body), headers: r.headers })
+            reply: r =>
+              route.fulfill({
+                status: r.statusCode,
+                body: JSON.stringify(r.body),
+                headers: r.headers,
+              }),
           });
         });
-      }
+      },
     });
   }
 }
