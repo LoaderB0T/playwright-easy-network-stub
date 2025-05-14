@@ -1,6 +1,6 @@
 {
   "name": "playwright-easy-network-stub",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "main": "lib/index.js",
   "repository": "https://github.com/LoaderB0T/playwright-easy-network-stub.git",
   "author": {
@@ -23,21 +23,21 @@
     "lint": "pnpm eslint ./src/**"
   },
   "devDependencies": {
-    "@awdware/eslint-config-base": "^2.1.0",
+    "@awdware/eslint-config-base": "^2.1.1",
     "@awdware/eslint-config-nodejs": "^2.0.0",
     "@awdware/prettier-config": "^1.0.0",
-    "@playwright/test": "^1.47.2",
-    "@types/node": "^20.12.7",
-    "@types/ws": "^8.5.10",
-    "easy-network-stub": "^7.1.0",
-    "eslint": "^9.11.1",
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.18",
+    "@types/ws": "^8.18.1",
+    "easy-network-stub": "^7.3.0",
+    "eslint": "^9.26.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-unused-imports": "4.1.4",
-    "prettier": "^3.3.3",
-    "rimraf": "^5.0.5",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5",
-    "typescript-eslint": "8.8.0"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "8.32.1"
   },
   "peerDependencies": {
     "@playwright/test": ">= 1.18.0",

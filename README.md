@@ -95,6 +95,16 @@ blogStub.stub('GET', 'test?{refresh?:boolean}', ({ body, params }) => {
 blogStub.stub('GET', 'test?{props:number[]}', ({ params }) => {
   params.props.forEach(x => console.log(x));
 });
+
+
+// You can remove a stub with its handle or all stubs at once
+const handle = blogStub.stub('GET', 'test?{props:number[]}', ({ params }) => {
+  params.props.forEach(x => console.log(x));
+});
+handle.unregister(); // remove this stub
+// Or:
+
+blogStub.unregisterAll(); // remove all stubs
 ```
 
 ## Strongly typed api parameters
