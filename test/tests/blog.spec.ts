@@ -1,6 +1,6 @@
-import test, { expect } from '@playwright/test';
+import {test, expect } from '@playwright/test';
 import { PlaywrightEasyNetworkStub } from 'playwright-easy-network-stub';
-import { expectFailFetch, expectFetch } from './helper/expect-fetch';
+import { expectFailFetch, expectFetch } from './helper/expect-fetch.js';
 
 let blogStub: PlaywrightEasyNetworkStub;
 let lastError: string;

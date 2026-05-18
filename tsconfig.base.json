@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "ES2015",
     "module": "Node16",
-    "baseUrl": "./",
     "lib": [
       "ES2020"
     ],
