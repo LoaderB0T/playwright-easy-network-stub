@@ -24,7 +24,7 @@
   "type": "module",
   "prettier": "@awdware/prettier-config",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
+    "postinstall": "pnpm playwright install",
     "clean": "pnpm rimraf lib",
     "build": "pnpm run clean && pnpm tsc",
     "test": "pnpm playwright test -c test",
