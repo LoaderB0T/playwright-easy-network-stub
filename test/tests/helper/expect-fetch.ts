@@ -1,6 +1,6 @@
 import { expect, Page } from '@playwright/test';
 import { HttpMethod } from 'easy-network-stub';
-import { getError } from './expected-error';
+import { getError } from './expected-error.js';
 
 export type FetchType = {
   url: string;
