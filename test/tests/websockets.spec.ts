@@ -1,4 +1,4 @@
-import test, { expect } from '@playwright/test';
+import {test, expect } from '@playwright/test';
 import {EasyWsStub} from 'easy-network-stub/ws';
 
 let wsStub: EasyWsStub;
@@ -19,5 +19,5 @@ test('Websocket Test', async ({ page }) => {
   await page.click('button');
   await expectMsgPromise;
   wsStub.send('Next Payload');
-  expect(await page.locator('#msg').textContent()).toBe('Next Payload');
+  await expect(page.locator('#msg')).toHaveText('Next Payload');
 });
