@@ -14,7 +14,7 @@ The base class of this package is:
 
 ## Motivation 💥
 
-When running tests in playwright, sometimes you want to mock all network requests. Especially when running tests in a CI environment. This package provides an easy and type safe way to mock network requests for a whole API.
+When running tests in playwright, sometimes you want to mock all network requests. Especially when running tests in a CI environment. This package provides an easy and type-safe way to mock network requests for a whole API.
 
 ## Features 🔥
 
@@ -30,11 +30,11 @@ When running tests in playwright, sometimes you want to mock all network request
 
 ✅ Supports EventSource & ndjson
 
-✅ Supports WebSockets (beta)
+✅ Supports WebSockets
 
 ✅ No production dependencies (You need to have playwright installed, of course)
 
-✅ ESM & CJS exports
+✅ ESM exports
 
 The primary use case for this package is to create a mock server for your tests so that they do not need real network requests.
 
@@ -128,6 +128,11 @@ srh.send('Hello');
 srh.send('World');
 srh.close();
 ```
+
+## Execution order
+
+When two registered stubs match a request URL, the latest stub (registered last) is used to respond.
+
 
 ## Contributing 🧑🏻‍💻
 
